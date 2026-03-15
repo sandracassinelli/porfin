@@ -24,10 +24,12 @@
     --green-bg: #E8F5EE;
   }
 
-  html, body {
-    height: 100%;
-    background: #EDE8E2;
+  html {
+    min-height: 100%;
+  }
+  body {
     min-height: 100vh;
+    background: #EDE8E2;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -40,6 +42,7 @@
     width: 100%;
     max-width: 390px;
     min-height: 100vh;
+    height: 100vh;
     background: var(--cream);
     position: relative;
     overflow: hidden;
@@ -49,7 +52,7 @@
   /* ── SCREENS ── */
   .screen {
     position: absolute;
-    inset: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
@@ -57,6 +60,7 @@
     transform: translateX(40px);
     transition: opacity .35s ease, transform .35s ease;
     background: var(--cream);
+    min-height: 100vh;
   }
   .screen.active {
     opacity: 1;
